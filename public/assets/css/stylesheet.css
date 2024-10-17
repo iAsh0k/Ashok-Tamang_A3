@@ -1,144 +1,20 @@
-$primary-color: #324360;
-$secondary-color: #35c4ce;
-$default-font: 'Josefin Sans', sans-serif;
-$body-font: 'Quando', sans-serif;
-$gray-color: #989898;
+/* Error: Undefined mixin.
+ *    ,
+ * 39 | /     @include media("tablet") {
+ * 40 | |       ul {
+ * 41 | |         display: flex;
+ * 42 | |       }
+ * 43 | \     }
+ *    '
+ *   src/scss/stylesheet.scss 39:5  root stylesheet */
 
-
-header {
-    font-family: $default-font;
-  
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 60px;
-  
-      ul {
-        display: none;
-  
-        li {
-          margin: 0 15px;
-          position: relative;
-          line-height: 24px;
-          
-          a {
-            color: $primary-color;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 900;
-            
-            &:hover {
-              color: $secondary-color;
-            }
-          }
-        }
-      }
-  
-      @include media("tablet") {
-        ul {
-          display: flex;
-        }
-      }
-    }
-  }
-  
-  article {
-    margin-bottom: 50px;
-    display: flex;
-    flex-wrap: wrap;
-  
-    .image-part {
-      margin-bottom: 10px;
-  
-      img {
-        @include transition(3.5s);
-        &:hover {
-          transform: scale(1.5, 1.5);
-        }
-      }
-    }
-  
-    .post-title {
-      margin-top: 0;
-  
-      a {
-        color: $primary-color;
-        font-size: 26px;
-        font-weight: 900;
-  
-        &:hover {
-          color: $secondary-color;
-        }
-      }
-    }
-  }
-
-  
-  body {
-    font-family: $body-font;
-    font-size: 15px;
-    color: $gray-color;
-    
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    p {
-      margin-bottom: 25px;
-      line-height: 1.6em;
-    }
-  
-    a {
-      font-weight: 400;
-      text-decoration: none;
-      color: $primary-color;
-      @include transition(0.20s);
-  
-      &:hover {
-        color: lighten($gray-color, 15%);
-      }
-    }
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $default-font;
-    color: $primary-color;
-    margin-bottom: 20px;
-    font-weight: 400;
-  
-    h1 {
-      font-size: 37px;
-    }
-  
-    h2 {
-      font-size: 31px;
-    }
-    
-    h3 {
-      font-size: 26px;
-    }
-  }
-  
-  .container {
-    width: 94%;
-    margin: 0 auto;
-  
-    @include media("tablet") {
-      width: 90%;
-    }
-  }
-
-  
-  @mixin transition($duration) {
-    transition: all $duration ease;
-  }
-  
-  @mixin media($size) {
-    @if $size == "tablet" {
-      @media only screen and (min-width: 650px) {
-        @content;
-      }
-    }
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined mixin.\a    \2577 \a 39 \2502  \250c      @include media("tablet") {\a 40 \2502  \2502        ul {\a 41 \2502  \2502          display: flex;\a 42 \2502  \2502        }\a 43 \2502  \2514      }\a    \2575 \a   src/scss/stylesheet.scss 39:5  root stylesheet';
+}
