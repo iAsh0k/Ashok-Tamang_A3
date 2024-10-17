@@ -1,0 +1,18 @@
+{
+  "name": "assign3cssprecomiler",
+  "version": "1.0.0",
+  "scripts": {
+    "goservergo": "lite-server --baseDir=\"public\"",
+    "ashokisgoated":"sass --watch src/scss:public/assets/css",
+    "start":"concurrently \"npm run goservergo\" \"npm run ashokisgoated\""
+  },
+  "author": "Ashok Tamang",
+  "license": "private",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "lite-server": "^2.6.1",
+    "sass": "^1.79.5"
+  }
+}
