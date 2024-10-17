@@ -3,22 +3,21 @@ body {
   font-size: 15px;
   color: #787878;
 }
+body p {
+  margin-bottom: 25px;
+  line-height: 1.6em;
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-p {
-  margin-bottom: 25px;
-  line-height: 1.6em;
-}
-
 a {
   font-weight: 400;
   text-decoration: none;
-  color: #999999;
-  transition: color 0.2s ease;
+  color: #111111;
+  transition: 0.2s;
 }
 a:hover {
   color: #999999;
@@ -45,6 +44,7 @@ h4 h1,
 h5 h1,
 h6 h1 {
   font-size: 37px;
+  font-weight: 400;
 }
 h1 h2,
 h2 h2,
@@ -53,6 +53,7 @@ h4 h2,
 h5 h2,
 h6 h2 {
   font-size: 31px;
+  font-weight: 400;
 }
 h1 h3,
 h2 h3,
@@ -61,6 +62,7 @@ h4 h3,
 h5 h3,
 h6 h3 {
   font-size: 26px;
+  font-weight: 400;
 }
 h1 h4,
 h2 h4,
@@ -69,6 +71,7 @@ h4 h4,
 h5 h4,
 h6 h4 {
   font-size: 21px;
+  font-weight: 400;
 }
 h1 h5,
 h2 h5,
@@ -77,6 +80,7 @@ h4 h5,
 h5 h5,
 h6 h5 {
   font-size: 18px;
+  font-weight: 400;
 }
 h1 h6,
 h2 h6,
@@ -85,6 +89,7 @@ h4 h6,
 h5 h6,
 h6 h6 {
   font-size: 15px;
+  font-weight: 400;
 }
 
 .container {
@@ -103,50 +108,6 @@ header {
 header nav ul {
   display: none;
 }
-header nav ul li {
-  margin: 0 15px;
-  position: relative;
-  line-height: 24px;
-}
-header nav ul li.menu-item-has-children > a::after {
-  margin-left: 7px;
-  font-family: "FontAwesome";
-  font-size: 13px;
-  color: #324360;
-  content: "\f078";
-}
-header nav ul li:hover ul {
-  visibility: visible;
-  opacity: 1;
-}
-header nav ul li ul {
-  visibility: hidden;
-  opacity: 0;
-  display: block;
-  position: absolute;
-  z-index: 9999;
-  left: 0;
-  background: #f0f0f0;
-  transition: all 0.2s ease;
-}
-header nav ul li ul li {
-  border-top: 1px solid #e9e9e9;
-  margin: 0;
-}
-header nav ul li ul li a {
-  display: block;
-  color: #111111;
-  min-width: 175px;
-  margin: 0;
-  padding: 20px 10px;
-  line-height: 1.4em;
-  letter-spacing: 1px;
-  transition: color 0.35s ease;
-}
-header nav ul li ul li a:hover {
-  background: #ffffff;
-  color: #000;
-}
 @media only screen and (min-width: 650px) {
   header nav {
     max-width: 1170px;
@@ -159,6 +120,18 @@ header nav ul li ul li a:hover {
   header nav ul {
     display: flex;
   }
+  header nav ul li {
+    margin: 0 15px;
+    position: relative;
+    line-height: 24px;
+  }
+  header nav ul li.menu-item-has-children > a::after {
+    margin-left: 7px;
+    font-family: "FontAwesome";
+    font-size: 13px;
+    color: #324360;
+    content: "\f078";
+  }
   header nav ul a {
     font-family: "Josefin Sans", sans-serif;
     color: #324360;
@@ -166,18 +139,11 @@ header nav ul li ul li a:hover {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 900;
+    transition: 0.2s;
   }
   header nav ul a:hover {
     color: #35c4ce;
   }
-  header nav ul .current-menu-item a {
-    border-bottom: 2px solid #324360;
-  }
-}
-
-.top-logo {
-  width: 200px;
-  margin: 20px auto 40px;
 }
 
 article {
@@ -185,26 +151,14 @@ article {
   display: flex;
   flex-wrap: wrap;
 }
-@media only screen and (min-width: 650px) {
-  article {
-    display: flex;
-  }
-}
 article .image-part {
   margin-bottom: 10px;
 }
-@media only screen and (min-width: 650px) {
-  article .image-part {
-    flex: 1;
-    overflow: hidden;
-    margin-bottom: 0;
-  }
-  article .image-part img {
-    transition: transform 3.5s ease;
-  }
-  article .image-part img:hover {
-    transform: scale(1.5, 1.5);
-  }
+article .image-part img {
+  transition: transform 3.5s ease-in-out;
+}
+article .image-part img:hover {
+  transform: scale(1.5, 1.5);
 }
 article .content-part {
   flex: 1;
@@ -221,7 +175,7 @@ article .post-title a {
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.3em;
-  transition: all 0.3s ease;
+  transition: 0.2s;
 }
 article .post-title a:hover {
   color: #35c4ce;
@@ -235,45 +189,43 @@ footer {
 }
 footer #footer a {
   color: #989898;
+  transition: 0.2s;
 }
 footer #footer a:hover {
   color: #111111;
 }
-footer #footer .footer-logo {
+footer .footer-logo {
   width: 200px;
   margin: 20px auto;
   text-align: center;
   vertical-align: middle;
 }
-footer #footer .footer-social-links {
+footer .footer-social-links {
   padding: 20px 0;
   line-height: 2em;
 }
-footer #footer .footer-social-links a {
+footer .footer-social-links a {
   margin: 0 10px;
   font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-footer #footer .footer-social-links a span {
+footer .footer-social-links a span {
   display: none;
 }
-@media only screen and (min-width: 650px) {
-  footer #footer .footer-social-links a {
-    margin: 0 28px;
-  }
-  footer #footer .footer-social-links a i {
-    margin-right: 5px;
-  }
-  footer #footer .footer-social-links a span {
-    display: inline;
-    font-size: 11px;
-  }
-}
-footer #footer #footer-copyright {
+footer #footer-copyright {
   padding: 20px 0;
   font-size: 12px;
   color: #989898;
+}
+@media only screen and (min-width: 650px) {
+  footer .footer-social-links a {
+    margin: 0 28px;
+  }
+  footer .footer-social-links a span {
+    display: inline;
+    font-size: 11px;
+  }
 }
 
 /*# sourceMappingURL=stylesheet.css.map */
