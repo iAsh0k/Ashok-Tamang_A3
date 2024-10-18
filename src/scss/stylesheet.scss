@@ -90,7 +90,7 @@ h6 {
     margin: 0 auto;
 }
 
-/* Header and main nav */
+// Header and main nav
 header {
     font-family: $font-header;
     
@@ -106,7 +106,7 @@ header {
     }
 }
 
-/* Posts */
+// Posts 
 article {
     margin-bottom: 50px;
     display: flex;
@@ -134,7 +134,7 @@ article {
     }
 }
 
-/* Footer */
+// Footer
 footer {
     padding: 30px 0;
     text-align: center;
@@ -232,7 +232,7 @@ footer {
                 border-bottom: 2px solid $color-link;
             }
 
-            /* Sub nav */
+            // Sub nav
             ul {
                 visibility: hidden;
                 opacity: 0;
@@ -271,7 +271,7 @@ footer {
         }
     }
 
-    /* Posts */
+    // Posts
     article {
         display: flex;
 
@@ -295,7 +295,7 @@ footer {
         }
     }
 
-    /* Footer */
+    // Footer
     .footer-social-links a {
         margin: 0 28px;
 
