@@ -109,6 +109,7 @@ footer {
   text-align: center;
   background: #eaf2ff;
   color: #989898;
+  position: relative;
 }
 footer #footer a {
   color: #989898;
