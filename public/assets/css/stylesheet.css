@@ -135,6 +135,11 @@ footer .footer-social-links a {
 footer .footer-social-links a span {
   display: none;
 }
+@media only screen and (min-width: 650px) {
+  footer .footer-social-links a span {
+    display: inline;
+  }
+}
 footer #footer-copyright {
   padding: 20px 0;
   font-size: 12px;
